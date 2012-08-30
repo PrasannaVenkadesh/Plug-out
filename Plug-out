@@ -1,0 +1,53 @@
+#!/usr/bin/env python
+
+"""
+Application Name:- Plug-out
+Version:- 1.0
+Author:- Prasanna Venkadesh (http://prasopensource.wordpress.com)
+License:- GNU GPL V3.0
+
+"""
+ 
+import pynotify
+from threading import Timer
+
+def battery_check():
+ 
+	try:
+		file_now = open('/sys/class/power_supply/BAT0/charge_now', 'r')
+		now = float(file_now.read())
+		file_now.close()
+	except IOError:
+		file_now = open('/sys/class/power_supply/BAT0/energy_now', 'r')
+                now = float(file_now.read())
+                file_now.close()
+
+	try:
+		file_full = open('/sys/class/power_supply/BAT0/charge_full', 'r')
+		ful = float(file_full.read())
+		file_full.close()
+ 	
+		percentage = int((now/ful) * 100)
+	except IOError:
+		file_full = open('/sys/class/power_supply/BAT0/energy_full', 'r')
+                ful = float(file_full.read())
+                file_full.close()
+
+                percentage = int((now/ful) * 100)
+
+	file_status = open('/sys/class/power_supply/BAT0/status', 'r')
+	status = file_status.read()
+	status = status.strip("\n")
+	file_status.close()
+
+	if percentage == 100 and status != "Discharging" :
+	        pynotify.init("Plug-out")
+        	notification = pynotify.Notification ("Charge-full", "Go-Green, Remove your Power Cable", "dialog-warning")
+        	notification.show()
+	
+	timer = Timer(60.0,battery_check)
+	timer.start()
+
+if __name__ == "__main__": 
+	print "Running\nPress ctrl + z to stop"
+	battery_check()
