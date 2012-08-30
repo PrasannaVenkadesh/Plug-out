@@ -42,7 +42,7 @@ def battery_check():
 
 	if percentage == 100 and status != "Discharging" :
 	        pynotify.init("Plug-out")
-        	notification = pynotify.Notification ("Charge-full", "Go-Green, Remove your Power Cable", "dialog-warning")
+        	notification = pynotify.Notification ("Battery Fully Charged", "Go-Green, Remove your Power Cable", "dialog-warning")
         	notification.show()
 	
 	timer = Timer(60.0,battery_check)
