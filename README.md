@@ -18,6 +18,6 @@ How to use?
 
 #### Issue Executable Permission
 > In order to run this script, you need to issue permission for the file to execute. Use the below code to issue executable permission for all users and groups.
->		chmod a+x Plug-out
+>	chmod a+x Plug-out
 > If that doesn't works, try with 'sudo' like this
->		sudo chmod a+x Plug-out
+>	sudo chmod a+x Plug-out
