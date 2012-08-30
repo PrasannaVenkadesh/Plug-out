@@ -29,6 +29,6 @@ How to use?
 
 	./Plug-out
 
-###### A Github page with Screenshots is getting ready, Check screenshots before using.
+###### A <a href="http://prasannavenkadesh.github.com/Plug-out/">Github page</a> is available with Screenshots, Check screenshots before using.
 
 > Note : This script can be added to System startup applications, so that you need not run everytime. When you start your system, it runs in background and displays notification whenever charge gets full. Notification will be repeated every minute, until Unplugging the cable from laptop.
