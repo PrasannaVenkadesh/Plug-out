@@ -17,7 +17,7 @@ How to use?
 * Use Terminal and navigate to the extracted folder.
 
 #### Issue Executable Permission
-> In order to run this script, you need to issue permission for the file to execute. Use the below code to issue executable permission for all users and groups.
->	chmod a+x Plug-out
-> If that doesn't works, try with 'sudo' like this
->	sudo chmod a+x Plug-out
+In order to run this script, you need to issue permission for the file to execute. Use the below code to issue executable permission for all users and groups.
+	chmod a+x Plug-out
+If that doesn't works, try with 'sudo' like this
+	sudo chmod a+x Plug-out
