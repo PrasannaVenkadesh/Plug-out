@@ -31,4 +31,4 @@ How to use?
 
 ###### A Github page with Screenshots is getting ready, Check screenshots before using.
 
-> Note : This script can be added to System startup applications, so that you need not run everytime. Everytime when you start your system, it runs in background and displays notification whenever charge gets full. Notification will be repeated every minute, until Unplugging the cable from laptop.
+> Note : This script can be added to System startup applications, so that you need not run everytime. When you start your system, it runs in background and displays notification whenever charge gets full. Notification will be repeated every minute, until Unplugging the cable from laptop.
