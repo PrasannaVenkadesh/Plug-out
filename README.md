@@ -27,4 +27,4 @@ How to use?
 
 ####3. Don't wait, Run.
 
-	./Plug-out
+		./Plug-out
