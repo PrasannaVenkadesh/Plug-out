@@ -1,7 +1,7 @@
 Plug-out
 ========
 
-> Plug-out is a python script which when executed will display notification when laptop's battery charge gets full. The idea is to save electricity from being wasted. Once the Charge is full, Please plug-out the power cable. Go Green.
+> Plug-out is a python script which when executed will display notification when laptop's battery charge gets full. 
 
 Why Plug-out?
 -------------
@@ -31,4 +31,4 @@ How to use?
 
 ###### A <a href="http://prasannavenkadesh.github.com/Plug-out/">Github page</a> is available with Screenshots, Check screenshots before using.
 
-> Note : This script can be added to System startup applications, so that you need not run everytime. When you start your system, it runs in background and displays notification whenever charge gets full. Notification will be repeated every minute, until Unplugging the cable from laptop.
+> Note : This script can be added to System startup applications, so that you need not run everytime. When you start your system, it runs in background and displays notification whenever charge gets full. Notification will be displayed in the regular interval of 3 minutes.
