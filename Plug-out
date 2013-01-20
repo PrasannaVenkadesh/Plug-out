@@ -40,12 +40,12 @@ def battery_check():
 	status = status.strip("\n")
 	file_status.close()
 
-	if percentage == 100 and status != "Discharging" :
+	if percentage == 100 and status != "Discharging" or status == "Unknown" :
 	        pynotify.init("Plug-out")
         	notification = pynotify.Notification ("Battery Fully Charged","You may consider removing power cable", "notification-battery-100-plugged")
         	notification.show()
 
-	if percentage == 50 and status == "Discharging" :
+	if percentage in range(46,51) and status == "Discharging" :
 		pynotify.init("Plug-Out")
 		notification = pynotify.Notification ("50% of Charge is Left","Keep an eye at Charge level", "notification-battery-050")
 		notification.show()
